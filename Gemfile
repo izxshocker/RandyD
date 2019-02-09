@@ -28,6 +28,8 @@ gem 'autoprefixer-rails', '8.6.5'
 gem 'jquery-rails'
 gem 'bootswatch-rails'
 gem 'lockup'
+gem 'pg', :group => :production
+gem 'activerecord-postgresql-adapter', :group => :production
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

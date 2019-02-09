@@ -10,13 +10,15 @@
       </ul>
     </div>
   <% end %>
+  <br>
 
-  <div class="field">
+  <div class="field text-center" style="padding-right:50px">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+  <br>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="row">
+    <div class="col-lg-offset-5" style="padding-left:50px"><button type="submit" class="btn btn-primary">Add</button></div>
   </div>
 <% end %>

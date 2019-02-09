@@ -14,7 +14,7 @@
         <% @player.tracks.order(updated_at: :desc).each do |track| %>
           <tr data-link="<%= track_path track%>">
             <% if track.raided %>
-              <td class="tdhover" style="color:grey"><%= track.x%>, <%= track.z%></td>
+              <td class="tdhover" style="color:grey"><%= track.xN%>, <%= track.zN%></td>
             <% elsif (track.xMaxN.to_i - track.xMinN.to_i).abs < 101%>
               <td class="tdhover" style="color:#95ff99"><%= track.xN%>, <%= track.zN%></td>
             <% else %>

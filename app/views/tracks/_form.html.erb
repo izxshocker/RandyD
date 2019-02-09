@@ -1,0 +1,171 @@
+<div class="container">
+<%= form_with(model: track, local: true) do |form| %>
+  <% if track.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(track.errors.count, "error") %> prohibited this track from being saved:</h2>
+
+      <ul>
+      <% track.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!--  <div class="field">-->
+    <%#= form.label :x %>
+    <%#= form.number_field :x %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :z %>
+    <%#= form.number_field :z %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :xMax %>
+    <%#= form.number_field :xMax %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zMax %>
+    <%#= form.number_field :zMax %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :xMin %>
+    <%#= form.number_field :xMin %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zMin %>
+    <%#= form.number_field :zMin %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :xP %>
+    <%#= form.number_field :xP %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zP %>
+    <%#= form.number_field :zP %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :xN %>
+    <%#= form.number_field :xN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zN %>
+    <%#= form.number_field :zN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zMaxN %>
+    <%#= form.number_field :zMaxN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zMaxN %>
+    <%#= form.number_field :zMaxN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :xMinN %>
+    <%#= form.number_field :xMinN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zMinN %>
+    <%#= form.number_field :zMinN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :xPN %>
+    <%#= form.number_field :xPN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :zPN %>
+    <%#= form.number_field :zPN %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :raided %>
+    <%#= form.check_box :raided %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :notes %>
+    <%#= form.text_field :notes %>
+<!--  </div>-->
+
+  <div>
+    <fieldset>
+      <%= form.hidden_field :player_id, :value => params[:player_id]%>
+
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-3"> <div class="bs-component">
+          <div class="form-group">
+            <label for="xN" class="col-form-label">X Coord</label>
+            <%= form.number_field :xN,{:class=>"form-control", :style=>"max-width:150px", :id=>"xN", :required => true}%>
+          </div>
+          <div class="form-group">
+            <label for="xDistanceN" class="col-form-label">Distance</label>
+            <%= form.number_field :xDistanceN,{:class=>"form-control", :style=>"max-width:150px", :id=>"xDistanceN", :required => true}%>
+          </div>
+          <div class="form-group">
+            <label for="xNarrowN" class="col-form-label">Narrow</label>
+            <%= form.number_field :xNarrowN,{:class=>"form-control", :style=>"max-width:150px", :id=>"xNarrowN", :required => true}%>
+          </div>
+          <div class="form-group">
+            <label for="xDirectionN" class="col-form-label">Direction</label>
+<!--            <select class="form-control" style="max-width:120px" id="xDirectionN">-->
+<!--              <option>West</option>-->
+<!--              <option>East</option>-->
+<!--            </select>-->
+            <%= form.select :xDirectionN, ["West", "East"], {}, {:class=>"form-control", :style=>"max-width:120px"} %>
+          </div>
+
+        </div></div>
+        <div class="col-lg-4"> <div class="bs-component">
+          <div class="form-group">
+            <label for="zN" class="col-form-label">Z Coord</label>
+            <%= form.number_field :zN,{:class=>"form-control", :style=>"max-width:150px", :id=>"zN", :required => true}%>
+          </div>
+          <div class="form-group">
+            <label for="zDistanceN" class="col-form-label">Distance</label>
+            <%= form.number_field :zDistanceN,{:class=>"form-control", :style=>"max-width:150px", :id=>"zDistanceN", :required => true}%>
+          </div>
+          <div class="form-group">
+            <label for="zNarrowN" class="col-form-label">Narrow</label>
+            <%= form.number_field :zNarrowN,{:class=>"form-control", :style=>"max-width:150px", :id=>"zNarrowN", :required => true}%>
+          </div>
+          <div class="form-group">
+            <label for="zDirectionN" class="col-form-label">Direction</label>
+<!--            <select class="form-control" style="max-width:120px" id="zDirectionN">-->
+<!--              <option>North</option>-->
+<!--              <option>South</option>-->
+<!--            </select>-->
+            <%= form.select :zDirectionN, ["North", "South"], {}, {:class=>"form-control", :style=>"max-width:120px"} %>
+          </div>
+        </div>
+
+        </div></div>
+      <br>
+      <div class="row">
+        <div class="col-lg-offset-5" style="padding-left:30px"><button type="submit" class="btn btn-primary">Calculate</button></div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+<!--      <div class="form-group col-lg-offset-4" style="padding-left:30px">-->
+        <%#=form.text_area :notes, {:class=>"form-control", :style=>"max-width:320px", :id=>"notes", :placeholder=>"notes", :rows=>5}%>
+<!--      </div>-->
+      </div>
+
+    </fieldset>
+  </div>
+<% end %>
+</div>

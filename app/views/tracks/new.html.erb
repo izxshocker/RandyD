@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+<h1 class="text-center" style=" padding-right:30px">Narrow for <%= Player.find(params[:player_id]).name %></h1>
+<br>
+<%= render 'form', track: @track %>
+<div class="text-center" style="padding-right:30px">
+<%= link_to 'Back',  Player.find(params[:player_id]) %>
+  </div>
+  </div>
+</div>

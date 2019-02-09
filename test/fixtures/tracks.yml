@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: one
+  x: 1
+  z: 1
+  xMax: 1
+  zMax: 1
+  xMin: 1
+  zMin: 1
+  xP: 1
+  zP: 1
+  xN: 1
+  zN: 1
+  zMaxN: 1
+  xMinN: 1
+  zMinN: 1
+  xPN: 1
+  zPN: 1
+  raided: false
+  notes: MyString
+
+two:
+  player: two
+  x: 1
+  z: 1
+  xMax: 1
+  zMax: 1
+  xMin: 1
+  zMin: 1
+  xP: 1
+  zP: 1
+  xN: 1
+  zN: 1
+  zMaxN: 1
+  xMinN: 1
+  zMinN: 1
+  xPN: 1
+  zPN: 1
+  raided: false
+  notes: MyString

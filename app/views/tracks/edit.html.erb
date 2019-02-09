@@ -1,0 +1,29 @@
+<div class="text-center">
+<h1>Updating Track</h1>
+</div>
+
+<%= render 'form', track: @track %>
+
+<div class="container">
+  <div class="row">
+    <%= form_with(model: @track, local: true) do |form| %>
+
+      <div class="form-group col-lg-offset-4" style="padding-left:30px">
+        <%=form.text_area :notes, {:class=>"form-control", :style=>"max-width:320px", :id=>"notes", :placeholder=>"notes", :rows=>5}%>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-offset-5" style="padding-left:30px"><button type="submit" class="btn btn-primary">Update Note</button></div>
+      <br>
+
+    <%end %>
+    </div>
+    </div>
+
+<div class="text-center" style="padding-right:40px">
+<%= link_to 'Cancel', @track %>
+</div>
+<br>
+<div class="text-center" style="padding-right:40px">
+<%= link_to 'Delete', @track, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

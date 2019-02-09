@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+<h1 class="text-center" style=" padding-right:30px"><%=@player.name %></h1>
+    <br>
+    <% if @track.nil? %>
+      <div class="row">
+        <div  style="margin:0 auto">
+      <form accept-charset="UTF-8" action="/" data-remote="true" method="post">
+        <div>
+        <fieldset>
+          <div class="row">
+        <div class="col-lg-4 col-lg-offset-3"> <div class="bs-component">
+          <div class="form-group">
+            <label for="xCenterN" class="col-form-label">X Coord</label>
+            <input type="number" pattern="[0-9]" class="form-control" style="max-width:150px" id="xCenterN" value="">
+          </div>
+          <div class="form-group">
+            <label for="xNarrowN" class="col-form-label">Distance</label>
+            <input type="number" pattern="[0-9]" class="form-control" style="max-width:150px" id="xDistanceN" value="">
+          </div>
+          <div class="form-group">
+            <label for="xNarrowN" class="col-form-label">Narrow</label>
+            <input type="number" pattern="[0-9]" class="form-control" style="max-width:150px" id="xNarrowN" value="">
+          </div>
+          <div class="form-group">
+            <label for="xDirectionN" class="col-form-label">Direction</label>
+          <select class="form-control" style="max-width:120px" id="xDirectionN">
+            <option>West</option>
+            <option>East</option>
+          </select>
+          </div>
+
+        </div></div>
+          <div class="col-lg-4"> <div class="bs-component">
+            <div class="form-group">
+              <label for="zCenterN" class="col-form-label">Z Coord</label>
+              <input type="number" pattern="[0-9]" class="form-control" style="max-width:150px" id="zCenterN" value="">
+            </div>
+            <div class="form-group">
+              <label for="zNarrowN" class="col-form-label">Distance</label>
+              <input type="number" pattern="[0-9]" class="form-control" style="max-width:150px" id="zDistanceN" value="">
+            </div>
+            <div class="form-group">
+              <label for="zNarrowN" class="col-form-label">Narrow</label>
+              <input type="number" pattern="[0-9]" class="form-control" style="max-width:150px" id="zNarrowN" value="">
+            </div>
+            <div class="form-group">
+              <label for="zDirectionN" class="col-form-label">Direction</label>
+              <select class="form-control" style="max-width:120px" id="zDirectionN">
+                <option>North</option>
+                <option>South</option>
+              </select>
+            </div>
+          </div>
+
+          </div></div>
+          <br>
+          <div class="row">
+          <div class="col-lg-offset-5" style="padding-left:30px"><button type="submit" class="btn btn-primary">Calculate</button></div>
+          </div>
+
+        </fieldset>
+        </div>
+      </form>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

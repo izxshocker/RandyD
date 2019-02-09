@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-offset-5">
+<h1>Players</h1>
+
+<table>
+  <thead>
+    <tr>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.order(:name).each do |player| %>
+      <tr>
+        <td><%= button_to player.name, player, :class => "btn btn-link", :method => "get" %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
+    <br>
+<%= link_to 'New Player', new_player_path %>
+  </div>
+</div>
+</div>
